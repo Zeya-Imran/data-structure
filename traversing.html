@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traversing</title>
+</head>
+<body>
+    <!--
+        - an Arry with 10 elements
+        - enter a index number and finding the index of element
+    -->
+    <input  placeholder="Enter the element of array" id="elements"/> 
+    <button onclick="valueCheck()">check</button>
+    <br />
+    <hr />
+</body>
+    <script>
+       
+        const arr  = [5,1,8,4,9,6,3,7,10,15];
+        const arrLength = arr.length;
+        for (let index = 0; index < arrLength; index++) {
+            const element = arr[index];
+            document.write(`${element} is at ${index +1} Position <br />`);
+        }
+
+        function valueCheck()
+        {
+             let number = document.getElementById("elements").value;
+            if(number<= arrLength)
+            {
+                alert(arr[number -1]);
+            }else{
+                alert("Please Enter valid Index Number");
+            }
+            document.getElementById("elements").value = "";
+        }
+
+    </script>
+</html>
