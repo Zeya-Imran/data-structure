@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insertion</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const array =  [0,1,2,3,4,6,7,8,9];
+    const arrayLength = array.length; // calculating the length of array
+    for (let index = 0; index < arrayLength; index++) {
+        const element = array[index];
+        document.write(`${index} posittion Element of the array is ${element} <br />`);
+    }
+    const position = 5;
+    const newEl = 5;
+    for(let i = arrayLength-1; i>=position; i--)
+    {
+       if(i>=position)
+       {
+        array[i+1] = array[i];
+        array[i] = newEl;
+       }
+    //  document.write(array);
+    }
+     
+
+    document.write(`New Element of array after the insertion value at ${position+1} postion <br /> <br />`);
+
+    for (let index = 0; index < array.length; index++) {
+        const element = array[index];
+        document.write(`${index} posittion Element of the array is ${element} <br />`);
+    }
+
+// second method 
+
+//     array.slice(position,0,newEl);
+//    document.write(array);
+
+</script>
+</html>
